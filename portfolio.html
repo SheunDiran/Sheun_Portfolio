@@ -11,10 +11,10 @@
 <link rel="stylesheet" type="text/css" href="css/all.css">
 	
   <style>
-    div{min-height:50px;}
+    div{min-height:40px;}
 		*{font-family: "EB Garamond", serif;}
 		 .div{aspect-ratio:4/3;}
-		 img{object-fit:contain;height:100%;max-width:100%;border-radius:70%; mt-5;}
+		 img{object-fit:contain;height:80%;max-width:100%;border-radius:70%;}
      .about{text-align:center;}
 		.overlay{
       position:absolute;
@@ -22,8 +22,8 @@
         right:0px;
         bottom:0px;
         left:0px;
-background-color:rgba(0,0,0,0.3);height:inherit;width:100%;}
-.text{background-image: url(images/dark.jpg);min-height:800px;width:100%;
+background-color:rgba(0,0,0,0.3);height:500px;width:100%;}
+.text{background-image: url(images/dark.jpg);min-height:500px;width:100%;
 			background-size:100% auto;}
 			.me{color:ghostwhite;text-align:center;font-size:32px;}
 			.seun{font-size:25px;z-index:500px ;}
@@ -47,9 +47,12 @@ background-color:rgba(0,0,0,0.3);height:inherit;width:100%;}
                 .link p{text-align:center;color:limegreen;}
                 .link p a{text-decoration:none;color:limegreen;}
                 .link p a:hover{text-decoration:underline;color:blue;}
-              .mine{text-align:center;text-shadow: 2px 2px #0f0;}
+              
               #portfolio{background-color:#E5D4C0;}
               .f2{background-color:green;color:whitesmoke;text-align:center; }
+              .card{
+                min-height:200px
+              }
             </style>
 </head>
 <body >
@@ -91,10 +94,11 @@ background-color:rgba(0,0,0,0.3);height:inherit;width:100%;}
 
 <h3>Welcome to my Portfolio.</h3>
 <span> I am <span style="color:limegreen;"> OYEDIRAN SHEUN</span></span>
-<p>A  driven front-end developer looking to collaborate on exciting projects that push the boundaries of digital innovation. </p></div>
+<p>A  driven  Python full-stack developer looking to collaborate on exciting projects
+   that push the boundaries of digital innovation. </p></div>
 
 
-<section class="col-6 div mt-4 pt-4 pb-2 ">
+<section class="col-md-6 div mt-5 pt-5 pb-2 ">
 	<img src="images/myface.jpeg"  >
 	<!-- Button trigger modal -->
   <div class=" col-md-12 about mb-5 pb-5">
@@ -111,12 +115,15 @@ background-color:rgba(0,0,0,0.3);height:inherit;width:100%;}
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-       <h1> I am an highly motivated front-end developer with 5 years experience in creating a responsive and user-friendly website.I am also a fast learner.</h1>
+       <h1>"I am a Full-stack,PYTHON(FLASK) back-end developer, 
+         <br>passionate about creating responsive websites.  <br>
+         I am a skilled GIT-HUB user and a fast learner."</h1>
        <h1>Growing up, i was always fascinated by technology and how it could solve real-world problems.This curiosity led me to pursue a career in software development.</h1>
        <br>
         <h2 style="color:limegreen;">Education</h2>
         <span class="span"style="width:200px;text-align:center;mb-5">------</span>
-        <h3>Bsc,Computer science,Covenant University,Year 2024.</h3>
+        <h3>I am a Secondary School Graduate.</h3>
+        <h3>3-month coding bootcamp at MOAT ACADEMY</h3>
 
       </div>
       <div class="modal-footer">
@@ -142,79 +149,92 @@ background-color:rgba(0,0,0,0.3);height:inherit;width:100%;}
 </header>
 <!-- my skills -->
 <section class="row">
-  <div class="col skills" >
+  <div class="col skills mb-3" >
     <h1 id="skill">MY SKILLS</h1>
   </div>
 </section>
   <div class="container">
-    <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-success" style="width: 25%">
-    25%
-  </div>
-</div>
-<span class="skills-text pt-5">JAVASCRIPT</span>
-</div>
+    <div class="row">
+      <div class="col-md-8">
 <div class="container">
-<div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+  <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-success text-light" style="width: 92%">92%</div>
+  </div>
+  <span class="skills-text">JAVASCRIPT</span>
+  </div>
+<div class="container">
+<div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-primary text-light" style="width: 95%">95%</div>
 </div>
 <span class="skills-text">CSS</span>
 </div>
 <div class="container">
-<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div>
+<div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+  <div class="progress-bar bg-warning text-dark" style="width: 100%">100%</div>
 </div>
 <span class="skills-text">HTML</span>
 </div>
+
 <div class="container">
 <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
   <div class="progress-bar bg-danger" style="width: 100%">100%</div>
 </div><span class="skills-text">GRAPHICS DESIGNING</span>
 </div>
+<div class="container">
+  <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar bg-info text-dark" style="width: 100%">100%</div>
+  </div><span class="skills-text">PYTHON:FLASK</span>
+  </div>
+</div>
+
+<div class="col">
+  <img src="images/languages.png" alt="">
+</div>
+</div>
+</div>
 <!-- my projects -->
 <div class="row">
   <div class="col">
-    <h1 class="mine" id="portfolio">MY PROJECTS</h1>
+    <h1 class="m-3 bg-success text-center text-light" id="portfolio">MY PROJECTS</h1>
     
   </div>
 </div>
 <div class="row">
-  <div class="col-md-4 pb-5">
-<div class="card" style="width: 18rem;">
-  <iframe src="file:///C:/Users/HP/Desktop/mini_project1/index.html" class="card-img-top" ></iframe>
+  <div class="col-md-4 pb-5  ms-3">
+<div class="card" style="width: 25rem;">
+  <iframe src="file:///C:/Users/HP/Desktop/DIRAN_SOLFA/index.html" class="card-img-top" ></iframe>
   <div class="card-body">
-    <p class="card-text">FOR DIRANS ACADEMY.</p>
+    <p>A MUSIC WEBSITE</p>
+    <p class="card-text"><a href="DIRAN_SOLFA/index.html">DIRANS SOLFA.</a></p>
+   
   </div>
 </div>
 
 </div>
 <div class="col-md-4 pb-5">
 <div class="card" style="width: 18rem;">
-  <iframe src="file:///C:/Users/HP/Desktop/Seun%20wk2%20proj/wk2project.html" class="card-img-top"></iframe>
+  <iframe src="file:///C:/Users/HP/Desktop/bsintro/Seun%20Portfolio/Seun%20Portfolio/TECTONIC%20GLOBAL/homepage.html" class="card-img-top"></iframe>
   <div class="card-body">
-    <p class="card-text">FOR TECTONIC LTD.</p>
+    <p class="text-bolder">A SURVEYING WEBSITE</p>
+    <p class="card-text"><a href="TECTONIC GLOBAL/homepage.html"> TECTONIC LTD.</a></p>
   </div>
 </div>
 
 </div>
-<div class="col-md-4">
-<div class="card" style="width: 18rem;">
-  <iframe src="file:///C:/Users/HP/Desktop/practice/teens_hub/teenshubpractice.html" class="card-img-top"></iframe>
-  <div class="card-body">
-    <p class="card-text">FOR TEENS HUB.</p>
-  </div>
-</div>
 
 </div>
-</div>
-<!-- tstimonials -->
-  <div class="row">
-    <div class="col m-5 bg-tertiary">
+<!-- testimonials -->
+ <marquee behavior="" direction="right" >
+  <div class="row  m-5 card bg-light text-success">
+    <div class="col p-4 bg-tertiary">
 <h1>TESTIMONIALS</h1>
-<p>"Sheun is a talented and dedicated professional.Her work is super amazing."-John Sam,CEO of DIRANS ACADEMY</p> 
-   <p>"I have worked with Sheun on multiple projects, and im always blown away by her creativity,expertise,grit."-David O,KPEG Corporation</p>
+<p>"Sheun is a talented and dedicated developer.I love her creativity"
+  -Bimbo, CEO of Tectonic Global Services Limited </p> 
+   <p>"I have worked with Sheun on multiple projects,She is a fast learner and I'm always blown away by her creativity,
+    expertise,grit."-MOAT ACADEMY</p>
 </div>
     </div>
+  </marquee>
   
     
 <footer class="container-fluid foot">
@@ -231,12 +251,13 @@ background-color:rgba(0,0,0,0.3);height:inherit;width:100%;}
   </div>
   <div class="col-md-4  link p-5">
     <h1>Contact me</h1>
-    <p><img  width="20px"src="images/emailicon.png">oluwaseun@gmail.com</p>
-        <p><i class="fa-solid fa-phone"></i>+234-440-403-4044</p>
-    <p><i class="fa-duotone fa-solid fa-house"></i>12,diran street,sheun estate,USA.</p></div>
+    <p><img  width="20px"src="images/emailicon.png"><a href="https://mail.google.com/mail/u/0/#inbox">oluwaseun@gmail.com</a></p>
+    <p><i class="fa-solid fa-phone"></i> <a href="https://web.whatsapp.com/">+234-707-375-4496</a></p>
+    <p><i class="fa-duotone fa-solid fa-house"></i>Forthright Garden,Ogun State.</p></div>
     <div class="col-md-4 link p-5">
       <h1>Social Media</h1>
-    <p><i class="fa-brands fa-linkedin"></i><a href="#">LinkedIn</a></p>
+      <p><i class="fa-solid fa-phone"></i> <a href="https://web.whatsapp.com/">Whatsapp</a></p>
+    <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/feed/">LinkedIn</a></p>
     <p><i class="fa-brands fa-instagram"></i><a href="#">Instagram</a></p>
     <p><i class="fa-brands fa-x-twitter"></i><a href="#">Twitter</a></p>
   </div>
