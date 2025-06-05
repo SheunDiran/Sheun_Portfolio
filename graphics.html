@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/myface.jpeg" type="image/jpeg" sizes="16x16">
+    <link rel="icon" href="images/myface.jpeg" type="image/jpeg" sizes="32x32">
+    <link rel="icon" href="images/myface.jpeg" type="image/jpeg" sizes="64x64">
+    <title>OYEDIRAN OLUWASEUN - Graphic Designs</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa; /* Very light gray background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            padding-top: 70px; /* Adjust for fixed navbar height */
+        }
+
+        /* Main container for the content on this page */
+        .page-container {
+            background-color: #ffffff;
+            max-width: 1100px; /* Adjusted max-width for the 3-column grid */
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 15px; /* Softer rounded corners */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+        }
+
+        /* Section Title Style */
+        .section-title {
+            border-bottom: 3px solid #0d6efd;
+            padding-bottom: 12px;
+            margin-bottom: 50px;
+            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #0d6efd;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 0.05rem;
+            text-transform: uppercase;
+        }
+
+        /* General Link Styling */
+        a {
+            text-decoration: none;
+            color: #0d6efd;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #0a58ca;
+        }
+
+        /* Navbar Styling */
+        #nav {
+            background-color: #28a745 !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 1.9rem;
+            font-weight: bold;
+        }
+        .mynav .nav-link {
+            color: #fff !important;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+        .mynav .nav-link:hover {
+            color: #ffc107 !important;
+        }
+
+        /* Footer Styling */
+        .foot {
+            background-color: #212529;
+            color: #e9ecef;
+            padding-top: 50px;
+            margin-top: 60px;
+        }
+        .foot h1 {
+            color: #17a2b8;
+            font-size: 1.7rem;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+        .foot p {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+        .foot p a {
+            color: #adb5bd;
+            transition: color 0.3s ease;
+        }
+        .foot p a:hover {
+            color: #fff;
+        }
+        .f2 {
+            background-color: #343a40;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.95rem;
+            color: #ced4da;
+        }
+
+        /* --- GRAPHIC DESIGN GRID STYLES (E-commerce Card Look) --- */
+        #graphic-designs-section {
+            padding: 0; /* Let .page-container handle main padding */
+        }
+
+        .design-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive, but aims for 3 columns */
+            gap: 30px; /* Spacing between cards */
+            justify-content: center; /* Center the grid */
+            padding: 20px; /* Padding inside the section for cards */
+        }
+
+        /* Each design item styled like a product card */
+        .design-item {
+            background-color: #fff;
+            border-radius: 15px; /* Rounded corners for the entire card */
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Soft, consistent shadow */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            border: 1px solid #e0e0e0; /* Subtle border */
+        }
+
+        .design-item:hover {
+            transform: translateY(-8px); /* Lift effect on hover */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+        }
+
+        .design-item img {
+            width: 100%;
+            height: 280px; /* Fixed height for consistent image previews */
+            object-fit: cover; /* Covers the area, cropping if needed */
+            transition: transform 0.4s ease;
+            border-radius: 15px 15px 0 0; /* Apply border-radius only to top corners */
+        }
+
+        .design-item:hover img {
+            transform: scale(1.03); /* Slight zoom on hover */
+        }
+
+        .design-info {
+            padding: 20px; /* Padding inside the info section */
+            text-align: center;
+            flex-grow: 1; /* Allows info to take remaining space */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Pushes button to bottom */
+            border-top: 1px solid #f0f0f0; /* Separator from image */
+            border-radius: 0 0 15px 15px; /* Apply border-radius only to bottom corners */
+        }
+
+        .design-info h5 {
+            font-size: 1.3rem; /* Larger title */
+            color: #212529; /* Darker color for titles */
+            margin-bottom: 8px;
+            font-weight: 600; /* Semi-bold */
+        }
+
+        .design-info p {
+            font-size: 0.95rem; /* Standard text size */
+            color: #6c757d; /* Muted color for description */
+            margin-bottom: 15px; /* Space before button */
+        }
+
+        .btn-details {
+           
+            color: #fff;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            width: 100%; /* Full width button */
+            margin-top: auto; /* Push button to bottom if content varies */
+        }
+        .btn-details:hover {
+            background-color: #0a58ca;
+            border-color: #0a58ca;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Modal styling (retained and refined) */
+        .design-modal .modal-content {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        .design-modal .modal-header {
+            background-color: #0d6efd;
+            color: white;
+            border-bottom: none;
+            padding: 1.8rem;
+            position: relative;
+        }
+        .design-modal .modal-title {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .design-modal .btn-close {
+            filter: invert(1);
+            font-size: 1.2rem;
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+        }
+        .design-modal .modal-body {
+            padding: 30px;
+        }
+        .design-modal img.modal-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .design-modal .modal-description {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #333;
+        }
+        .design-modal .modal-footer {
+            border-top: none;
+            padding-top: 0;
+            justify-content: center;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-sm fixed-top bg-success" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">OYEDIRAN OLUWASEUN - Designs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse mynav" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Back to Portfolio</a>
+                    </li>
+                    </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 mb-5">
+    <h2 class="text-center">The Power of Graphics Design</h2>
+    <p class="text-center">In today's digital landscape, graphics design plays a crucial role in shaping user experiences and driving business success. A well-designed interface can make all the difference in capturing users' attention, building trust, and driving conversions.</p>
+    <div class="row">
+        <div class="col-md-4">
+            <h3><i class="fas fa-palette"></i> Visual Storytelling</h3>
+            <p>Graphics design allows you to tell a story through visuals, conveying complex information in a clear and concise manner. By leveraging color, typography, and imagery, you can create an emotional connection with your audience and leave a lasting impression.</p>
+        </div>
+        <div class="col-md-4">
+            <h3><i class="fas fa-users"></i> User-Centered Design</h3>
+            <p>Graphics design is not just about aesthetics; it's also about creating an intuitive and user-friendly experience. By understanding your target audience and designing with their needs in mind, you can create interfaces that are both beautiful and functional.</p>
+        </div>
+        <div class="col-md-4">
+            <h3><i class="fas fa-rocket"></i> Business Growth</h3>
+            <p>Effective graphics design can drive business growth by increasing brand recognition, improving user engagement, and ultimately driving conversions. By investing in high-quality design, you can differentiate yourself from competitors and establish a strong brand identity.</p>
+        </div>
+    </div>
+</div>
+
+
+    <div class="page-container">
+        <h1 class="section-title">My Graphic Design Portfolio</h1>
+
+        <section id="graphic-designs-section">
+            <div class="design-grid">
+               <div class="design-item">
+                <img src="images/Praise Tent 2.jpg" alt="Praise Tent Logo Design">
+                <div class="design-info">
+                    <h5>Praise Tent Logo Design</h5>
+                    <p>A modern and impactful logo for a mission-driven enterprise.</p>
+                    <button class="btn btn-success btn-details" data-bs-toggle="modal" data-bs-target="#designModal" data-image="images/Praise Tent 2.jpg" data-title="Praise Tent Logo Design" data-description="A modern logo design that embodies growth, stability, and innovation for a mission-driven enterprise.">View Details</button>
+                </div>
+            </div>
+                <div class="design-item">
+                <img src="images/relaunch.jpg" alt="Praise Tent Campaign Flyer">
+                <div class="design-info">
+                    <h5>Praise Tent Campaign Flyer</h5>
+                    <p>Promotional flyer for the '45-Day Relaunch Campaign'.</p>
+                    <button class="btn btn-success btn-details" data-bs-toggle="modal" data-bs-target="#designModal" data-image="images/relaunch.jpg" data-title="Praise Tent Campaign Flyer" data-description="A promotional flyer that captures the essence of the '45-Day Relaunch Campaign' with a strong call-to-action and visual appeal.">View Details</button>
+                </div>
+            </div>
+
+                 <div class="design-item">
+                <img src="images/bgp.jpeg" alt="Graduation Ceremony">
+                <div class="design-info">
+                    <h5>Graduation Ceremony</h5>
+                     <p>Capturing the essence of graduation day.</p>
+                    <button class="btn btn-success btn-details" data-bs-toggle="modal" 
+                    data-bs-target="#designModal" data-image="images/bgp.jpeg"
+                     data-title="Graduation Ceremony" data-description="A design that commemorates the achievement of graduation, symbolizing growth and new beginnings.">View Details</button>
+                </div>
+            </div>
+                 <div class="design-item">
+                <img src="images/fellowship.jpeg" alt="House Fellowship">
+                <div class="design-info">
+                    <h5>House Fellowship</h5>
+                    <p>Comprehensive brand identity design for a new house fellowship.</p>
+                    <button class="btn btn-success btn-details" data-bs-toggle="modal" data-bs-target="#designModal" data-image="images/fellowship.jpeg" data-title="House Fellowship" data-description="A branding package that creates a sense of community and belonging for a house fellowship.">View Details</button>
+                </div>
+            </div>
+  <div class="design-item">
+                <img src="images/announcement.jpeg" alt="Announcement">
+                <div class="design-info">
+                    <h5>Announcement</h5>
+                    <p>An eye-catching announcement design.</p>
+                    <button class="btn btn-success btn-details" data-bs-toggle="modal" data-bs-target="#designModal" data-image="images/announcement.jpeg" data-title="Announcement" data-description="A design that grabs attention and effectively communicates the message.">View Details</button>
+                </div>
+            </div>
+           <div class="design-item">
+    <img src="images/thanksgiving.jpeg" alt="Thanksgiving Poster Design">
+    <div class="design-info">
+        <h5>Thanksgiving Poster Design</h5>
+        <p>A heartwarming poster design for a Thanksgiving event.</p>
+        <button class="btn btn-success btn-details" data-bs-toggle="modal" data-bs-target="#designModal" data-image="images/thanksgiving.jpeg" data-title="Thanksgiving Poster Design" data-description="A poster design that captures the spirit of gratitude and community, perfect for a Thanksgiving event.">View Details</button>
+    </div>
+</div>
+        </div>
+    </section>
+</div>
+
+    <div class="modal fade design-modal" id="designModal" tabindex="-1" aria-labelledby="designModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="designModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" class="img-fluid modal-img" alt="Design Image">
+                    <p class="modal-description text-start"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container-fluid foot">
+        <div class='row'>
+            <div class="col-md-6 link p-5">
+                <h1>Contact me</h1>
+                <p><i class="fa fa-envelope"></i> Email: <a href="mailto:oluwaseunoyediran641@gmail.com">oluwaseunoyediran641@gmail.com</a></p>
+                <p><i class="fa fa-phone"></i> Whatsapp: <a href="tel:+2347073754496">+234-707-375-4496</a></p>         
+                <p><i class="fa-solid fa-location-dot"></i> Forthright Garden, Ogun State.</p>
+            </div>
+            <div class="col-md-6 link p-5">
+                <h1>Social Media</h1>
+                <p><i class="fa fa-phone"></i> Whatsapp: <a href="tel:+2347073754496">+234-707-375-4496</a></p> 
+                <p><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/feed/">LinkedIn</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col f2">
+                <p>&copy; 2025 SHEUN</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // JavaScript for Graphic Design Modal (Triggered by .btn-details)
+            const designModal = document.getElementById('designModal');
+            if (designModal) {
+                designModal.addEventListener('show.bs.modal', event => {
+                    // Changed from `event.relatedTarget` to target the `btn-details` parent for data attributes
+                    const button = event.relatedTarget; // The button that was clicked
+                    // Get data from the *button's* attributes
+                    const imageSrc = button.getAttribute('data-image');
+                    const title = button.getAttribute('data-title');
+                    const description = button.getAttribute('data-description');
+
+                    const modalTitle = designModal.querySelector('.modal-title');
+                    const modalImage = designModal.querySelector('.modal-img');
+                    const modalDescription = designModal.querySelector('.modal-description');
+
+                    modalTitle.textContent = title;
+                    modalImage.src = imageSrc;
+                    modalDescription.textContent = description;
+                });
+            }
+
+            // Initialization for Bootstrap Tooltips (if used elsewhere)
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+
+            // Typed text logic (only if .typed-text element exists on this page)
+            const typedTextElement = document.querySelector('.typed-text');
+            const texts = [
+                'A driven Python full-stack developer looking to collaborate on exciting projects that push the boundaries of digital innovation.',
+                'A passionate developer with a love for coding and problem-solving.',
+                'Front-end Developer',
+                'Python (Flask) Backend Developer',
+                'A creative and innovative thinker with a passion for building scalable and efficient software solutions.'
+            ];
+            const typingSpeed = 50;
+
+            function typeText(text) {
+                if (!typedTextElement) return;
+                let i = 0;
+                typedTextElement.innerHTML = '';
+                const interval = setInterval(() => {
+                    if (i < text.length) {
+                        typedTextElement.innerHTML += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            eraseText(text);
+                        }, 2000);
+                    }
+                }, typingSpeed);
+            }
+
+            function eraseText(text) {
+                if (!typedTextElement) return;
+                let i = text.length;
+                const interval = setInterval(() => {
+                    if (i > 0) {
+                        typedTextElement.innerHTML = text.substring(0, i);
+                        i--;
+                    } else {
+                        clearInterval(interval);
+                        const nextTextIndex = texts.indexOf(text) + 1;
+                        if (nextTextIndex < texts.length) {
+                            typeText(texts[nextTextIndex]);
+                        } else {
+                            typeText(texts[0]);
+                        }
+                    }
+                }, typingSpeed);
+            }
+
+            if (typedTextElement) {
+                typeText(texts[0]);
+            }
+        });
+    </script>
+</body>
+</html>
