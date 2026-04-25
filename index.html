@@ -691,17 +691,7 @@ Engineered and deployed a full-stack logistics web application (OMAK Logistics) 
 
   // Start typing the text
   typeText(texts[0]);
-	$('#exampleModal').on('shown.bs.modal', function () {
-    $(document).keydown(function(event) {
-        if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
-            event.preventDefault();
-        }
-    });
-});
-
-$('#exampleModal').on('hidden.bs.modal', function () {
-    $(document).off('keydown');
-});
+	
  
 
 
